@@ -14,7 +14,23 @@ const articles: Article[] = [
 ].map(([title, slug, excerpt, date, category, readingTime]) => ({ title, slug, excerpt, date, category, readingTime }) as Article);
 
 const dateLabel = (date: string) => new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short", year: "numeric" }).format(new Date(`${date}T12:00:00`));
-const Arrow = () => <span className="arrow" aria-hidden="true">↗</span>;
+const Arrow = () => (
+  <svg
+    className="arrow"
+    aria-hidden="true"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M4 12L12 4M5 4H12V11"
+      stroke="currentColor"
+      strokeWidth="1.25"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 const Label = ({ index, children }: { index: string; children: React.ReactNode }) => <div className="section-label"><span>{index}</span><span>{children}</span></div>;
 
 function ThemeControl({ theme, setTheme }: { theme: Theme; setTheme: (theme: Theme) => void }) {
