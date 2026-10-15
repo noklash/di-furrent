@@ -20,8 +20,8 @@ footer{padding:80px 0 30px;border-top:1px solid var(--line);background:var(--sur
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition-duration:.01ms!important}.signal{display:none}}
 .arrow {
   display: inline-block;
-  width: 0.85em;
-  height: 0.85em;
-  vertical-align: -0.05em;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.02em;
   flex-shrink: 0;
 }
